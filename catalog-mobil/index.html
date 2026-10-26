@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#f2f0e8" />
+		<meta name="description" content="Indeks koleksi mobil pilihan." />
+		<title>KRISJOHN - SPORT CARS</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<header class="topbar">
+			<a class="brand" href="#top" aria-label="KRISJOHN, beranda">
+				<span class="brand-mark">K</span>
+				<span class="brand-name">KRISJOHN<span class="brand-period">.</span></span>
+			</a>
+			<nav class="top-nav" aria-label="Navigasi utama">
+				<a class="nav-link active" href="#COLLECTION">COLLECTION</a>
+				<a class="nav-link" href="#ABOUT">ABOUT</a>
+			</nav>
+			<a class="collection-link" href="#COLLECTION"><span class="live-dot"></span> PRIVATE GARAGE <span class="nav-count">10</span></a>
+		</header>
+
+		<main id="top">
+			<section class="intro" aria-labelledby="page-title">
+				<div class="intro-copy">
+					<p class="eyebrow"><span class="eyebrow-line"></span> PRIVATE COLLECTION / 2026</p>
+					<h1 id="page-title">Welcome to<br /><span>KRISJOHN GARAGE</span></h1>
+					<p class="intro-note">LUXURIOUS AND FAST MACHINES</p>
+				</div>
+				<div class="intro-aside" aria-label="Informasi koleksi">
+					<div class="emblem-row">
+						<div class="bugatti-emblem" role="img" aria-label="Bugatti emblem">BUGATTI</div>
+						<svg class="ferrari-emblem" viewBox="0 0 72 52" role="img" aria-labelledby="ferrari-logo-title">
+							<title id="ferrari-logo-title">Ferrari emblem</title>
+							<circle cx="36" cy="26" r="23" fill="none" stroke="#c82429" stroke-width="4" />
+							<path d="M18 36V16h22v5H27v5h12v5H27v5h13v5H18z" fill="#c82429" />
+						</svg>
+					</div>
+					<span class="aside-label">THE COLLECTION</span>
+					<strong><span id="total-count">08
+
+                    </span><span class="count-slash"> / </span>KRISJOHN</strong>
+					<span class="aside-caption">MY FUTURE MY DREAM CARS</span>
+				</div>
+			</section>
+
+			<section class="feature" aria-label="Sorotan koleksi">
+				<div class="feature-image-wrap">
+					<img class="feature-image" src="img/bdivo21.jpg" alt="Bugatti Divo 2021" />
+					<span class="image-index">FEATURED / 01</span>
+					<span class="feature-stamp">M</span>
+				</div>
+				<div class="feature-info">
+					<p class="eyebrow feature-eyebrow">THE ART OF BUGATTI</p>
+					<h2>Bugatti<br /><span>Divo</span></h2>
+					<div class="feature-rule"></div>
+					<div class="feature-meta"><span>MODEL YEAR</span><strong>2021</strong></div>
+					<button class="feature-cta" type="button" data-view="divo-21">VIEW FEATURED CAR <span aria-hidden="true">↗</span></button>
+					<span class="feature-number">01 <i>/</i> 10</span>
+				</div>
+			</section>
+
+			<section class="catalog" id="COLLECTION" aria-labelledby="catalog-title">
+				<div class="catalog-heading">
+					<div>
+						<p class="eyebrow"><span class="eyebrow-line"></span> KRISJOHN GARAGE</p>
+						<h2 id="catalog-title">ALL <span>COLLECTION</span></h2>
+					</div>
+					<p class="catalog-description">KRISJOHN</p>
+				</div>
+
+				<div class="toolbar">
+					<div class="filter-group" role="group" aria-label="Filter merek">
+						<button class="filter-button is-active" type="button" data-make="all" aria-pressed="true">All <span>10</span></button>
+						<button class="filter-button" type="button" data-make="Bugatti" aria-pressed="false">BUGATTI <span>07</span></button>
+						<button class="filter-button" type="button" data-make="Ferrari" aria-pressed="false">FERRARI <span>03</span></button>
+						<button class="filter-button favorites-filter" type="button" data-make="favorites" aria-pressed="false"><span aria-hidden="true">♡</span> SAVED</button>
+					</div>
+					<div class="toolbar-actions">
+						<label class="search-box">
+							<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.8" cy="8.8" r="5.8"></circle><path d="m13.2 13.2 4 4"></path></svg>
+							<input id="search-input" type="search" placeholder="Cari mobil..." autocomplete="off" aria-label="Cari mobil" />
+						</label>
+						<label class="sort-control">
+							<span class="sr-only">COLLECTION SEQUENCE</span>
+							<select id="sort-select" aria-label="Urutkan koleksi">
+								<option value="featured">CHOICE</option>
+								<option value="newest">LATEST YEAR</option>
+								<option value="oldest">OLDEST YEAR</option>
+								<option value="az">NAME A–Z</option>
+							</select>
+						</label>
+					</div>
+				</div>
+
+				<div class="results-line"><span id="results-count">10 CARS</span><span class="results-divider"></span><span>INDONESIA · JAVA EST. MMXXI</span></div>
+				<div class="car-grid" id="car-grid" aria-live="polite"></div>
+				<div class="empty-state" id="empty-state" hidden>
+					<span class="empty-mark">M</span>
+					<h3>THERE IS NOTHING SUITABLE YET</h3>
+					<p>Try DIFFERENT KEYWORDS OR FILTERS.</p>
+					<button id="reset-filters" type="button">RESET FILTERS</button>
+				</div>
+			</section>
+
+			<dialog class="car-dialog" id="car-dialog" aria-labelledby="dialog-title">
+				<div class="dialog-visual" id="dialog-visual">
+					<div class="viewer-topline">
+						<span class="viewer-brand"><span class="viewer-brand-mark">S</span> KRISJOHN / PRIVATE VIEW</span>
+						<button class="dialog-close" id="dialog-close" type="button" aria-label="Close car details" autofocus>×</button>
+					</div>
+					<img id="dialog-image" src="" alt="" />
+					<span class="dialog-image-index" id="dialog-image-index"></span>
+					<div class="viewer-controls" aria-label="Browse the collection">
+						<button id="dialog-previous" type="button" aria-label="Previous car">←</button>
+						<span id="dialog-counter">01 / 08</span>
+						<button id="dialog-next" type="button" aria-label="Next car">→</button>
+					</div>
+					<button class="zoom-button" id="zoom-toggle" type="button" aria-label="Zoom photo" aria-pressed="false">+</button>
+				</div>
+				<div class="dialog-details">
+					<p class="eyebrow"><span class="eyebrow-line"></span> GARAGE SPECIMEN</p>
+					<p class="dialog-make" id="dialog-make"></p>
+					<h2 id="dialog-title"><span id="dialog-name"></span> <span class="dialog-year" id="dialog-year"></span></h2>
+					<p class="dialog-description" id="dialog-description"></p>
+					<p class="photo-credit" id="dialog-photo-credit-wrap" hidden>PHOTO CREDIT · <a id="dialog-photo-credit" target="_blank" rel="noreferrer"></a></p>
+					<div class="spec-heading"><span>TECHNICAL SPECIFICATION</span></div>
+					<dl class="spec-grid" id="dialog-specs"></dl>
+					<p class="spec-note">Specifications shown are general manufacturer references. Exact figures can vary by model year and market.</p>
+				</div>
+			</dialog>
+
+			<footer class="footer" id="ABOUT">
+				<a class="brand footer-brand" href="#top"><span class="brand-mark">S</span><span class="brand-name">KRISJOHN GARAGE<span class="brand-period">.</span></span></a>
+				<p>PRIVATE COLLECTION OF REMARKABLE MACHINES.</p>
+				<a class="tiktok-link" href="https://www.tiktok.com/@player1664" target="_blank" rel="noreferrer">@player1664</a>
+				<span class="footer-year">INDONESIA · JAVA EST. MMXXV</span>
+			</footer>
+		</main>
+	</body>
+</html>
